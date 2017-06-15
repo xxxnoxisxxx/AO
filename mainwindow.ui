@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>300</width>
+    <height>420</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>300</width>
+    <height>420</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>300</width>
+    <height>420</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Tilt-Shift effect</string>
@@ -17,19 +29,206 @@
    <iconset resource="resources.qrc">
     <normaloff>:/rec/img/main.png</normaloff>:/rec/img/main.png</iconset>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>261</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>10</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Góra</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>190</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dół</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>200</y>
+      <width>261</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>260</width>
+      <height>133</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayoutUp">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayoutUp">
+       <item>
+        <widget class="QLabel" name="labelBlurUp">
+         <property name="text">
+          <string>Rozmiar rozmycia</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxBlurUp">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>25</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDeviationXUp">
+         <property name="text">
+          <string>Odchylenie standardowe w kierunku X [sigmaX]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxDeviationXUp"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDeviationYUp">
+         <property name="text">
+          <string>Odchylenie standardowe w kierunku Y [sigmaY]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxDeviationYUp"/>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QVBoxLayout" name="verticalLayoutSliderUp">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QSlider" name="verticalSliderUp">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="formLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>220</y>
+      <width>260</width>
+      <height>133</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayoutDown">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayoutDown">
+       <item>
+        <widget class="QLabel" name="labelBlurDown">
+         <property name="text">
+          <string>Rozmiar rozmycia</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxBlurDown">
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>25</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDeviationXDown">
+         <property name="text">
+          <string>Odchylenie standardowe w kierunku X [sigmaX]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxDeviationXDown"/>
+       </item>
+       <item>
+        <widget class="QLabel" name="labelDeviationYDown">
+         <property name="text">
+          <string>Odchylenie standardowe w kierunku Y [sigmaY]</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="spinBoxDeviationYDown"/>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QVBoxLayout" name="verticalLayoutSliderDown">
+       <item>
+        <widget class="QSlider" name="verticalSliderDown">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>640</width>
+     <width>300</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>Plik</string>
     </property>
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
@@ -37,7 +236,7 @@
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>Pomoc</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
@@ -59,7 +258,10 @@
      <normaloff>:/rec/img/open.png</normaloff>:/rec/img/open.png</iconset>
    </property>
    <property name="text">
-    <string>Open image</string>
+    <string>Otwórz</string>
+   </property>
+   <property name="toolTip">
+    <string>Otwórz</string>
    </property>
   </action>
   <action name="actionSave">
@@ -71,7 +273,10 @@
      <normaloff>:/rec/img/save.png</normaloff>:/rec/img/save.png</iconset>
    </property>
    <property name="text">
-    <string>Save image</string>
+    <string>Zapisz</string>
+   </property>
+   <property name="toolTip">
+    <string>Zapisz</string>
    </property>
   </action>
   <action name="actionExit">
@@ -80,7 +285,7 @@
      <normaloff>:/rec/img/exit.png</normaloff>:/rec/img/exit.png</iconset>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>Wyjście</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -90,7 +295,7 @@
      <normalon>img/info.png</normalon>:/rec/img/info.png</iconset>
    </property>
    <property name="text">
-    <string>About</string>
+    <string>Informacje</string>
    </property>
   </action>
  </widget>

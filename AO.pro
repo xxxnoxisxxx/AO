@@ -31,7 +31,6 @@ SOURCES += \
 HEADERS += \
         mainwindow.h \
     tiltshift.h \
-    tiltshift.h
 
 FORMS += \
         mainwindow.ui
