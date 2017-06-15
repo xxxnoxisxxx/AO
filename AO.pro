@@ -32,3 +32,12 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+INCLUDEPATH += D:\opencv-build\install\include
+LIBS += -LD:\opencv-build\install\x86\mingw\lib \
+    -lopencv_core320.dll \
+    -lopencv_highgui320.dll \
+    -lopencv_imgcodecs320.dll \
+    -lopencv_imgproc320.dll \
+    -lopencv_features2d320.dll \
+    -lopencv_calib3d320.dll
