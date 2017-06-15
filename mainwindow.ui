@@ -30,7 +30,7 @@
     <normaloff>:/rec/img/main.png</normaloff>:/rec/img/main.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="Line" name="line">
+   <widget class="Line" name="lineUp">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -43,7 +43,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelUp">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -56,7 +56,7 @@
      <string>Góra</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelDown">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -69,7 +69,7 @@
      <string>Dół</string>
     </property>
    </widget>
-   <widget class="Line" name="line_2">
+   <widget class="Line" name="lineDown">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -103,11 +103,17 @@
        </item>
        <item>
         <widget class="QSpinBox" name="spinBoxBlurUp">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="minimum">
           <number>1</number>
          </property>
          <property name="maximum">
-          <number>25</number>
+          <number>24</number>
+         </property>
+         <property name="singleStep">
+          <number>2</number>
          </property>
         </widget>
        </item>
@@ -119,7 +125,20 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBoxDeviationXUp"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxDeviationXUp">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelDeviationYUp">
@@ -129,7 +148,20 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBoxDeviationYUp"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxDeviationYUp">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -140,6 +172,9 @@
        </property>
        <item>
         <widget class="QSlider" name="verticalSliderUp">
+         <property name="minimum">
+          <number>1</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
          </property>
@@ -177,7 +212,10 @@
           <number>1</number>
          </property>
          <property name="maximum">
-          <number>25</number>
+          <number>24</number>
+         </property>
+         <property name="singleStep">
+          <number>2</number>
          </property>
         </widget>
        </item>
@@ -189,7 +227,20 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBoxDeviationXDown"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxDeviationXDown">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
        </item>
        <item>
         <widget class="QLabel" name="labelDeviationYDown">
@@ -199,7 +250,20 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBoxDeviationYDown"/>
+        <widget class="QDoubleSpinBox" name="doubleSpinBoxDeviationYDown">
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -207,8 +271,14 @@
       <layout class="QVBoxLayout" name="verticalLayoutSliderDown">
        <item>
         <widget class="QSlider" name="verticalSliderDown">
+         <property name="minimum">
+          <number>1</number>
+         </property>
          <property name="orientation">
           <enum>Qt::Vertical</enum>
+         </property>
+         <property name="invertedAppearance">
+          <bool>true</bool>
          </property>
         </widget>
        </item>

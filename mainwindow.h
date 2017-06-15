@@ -25,7 +25,23 @@ class MainWindow : public QMainWindow {
 
   void on_actionAbout_triggered();
 
- private:
+  void on_spinBoxBlurUp_valueChanged(int arg1);
+
+  void on_verticalSliderUp_valueChanged(int value);
+
+  void on_doubleSpinBoxDeviationXUp_valueChanged(double arg1);
+
+  void on_doubleSpinBoxDeviationYUp_valueChanged(double arg1);
+
+  void on_doubleSpinBoxDeviationXDown_valueChanged(double arg1);
+
+  void on_doubleSpinBoxDeviationYDown_valueChanged(double arg1);
+
+  void on_spinBoxBlurDown_valueChanged(int arg1);
+
+  void on_verticalSliderDown_valueChanged(int value);
+
+private:
   TiltShift tiltShift;
   Ui::MainWindow* ui;
 };

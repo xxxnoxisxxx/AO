@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 #include <QFileDialog>
+#include "iostream"
 
 MainWindow::MainWindow(QWidget* parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -47,4 +48,52 @@ void MainWindow::on_actionExit_triggered() {
 
 void MainWindow::on_actionAbout_triggered() {
   QMessageBox::information(this, "title", "About");
+}
+
+void MainWindow::on_spinBoxBlurUp_valueChanged(int value)
+{
+    this->tiltShift.upSize = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_verticalSliderUp_valueChanged(int value)
+{
+    this->tiltShift.upHeight = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_doubleSpinBoxDeviationXUp_valueChanged(double value)
+{
+    this->tiltShift.upSigmaX = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_doubleSpinBoxDeviationYUp_valueChanged(double value)
+{
+    this->tiltShift.upSigmaY = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_spinBoxBlurDown_valueChanged(int size)
+{
+    this->tiltShift.downSize = size;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_doubleSpinBoxDeviationXDown_valueChanged(double value)
+{
+    this->tiltShift.downSigmaX = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_doubleSpinBoxDeviationYDown_valueChanged(double value)
+{
+    this->tiltShift.downSigmaY = value;
+    this->tiltShift.gaussianBlur();
+}
+
+void MainWindow::on_verticalSliderDown_valueChanged(int value)
+{
+    this->tiltShift.downHeight = value;
+    this->tiltShift.gaussianBlur();
 }
