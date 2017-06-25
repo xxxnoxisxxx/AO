@@ -13,10 +13,10 @@ TiltShift::~TiltShift() {
 }
 
 void TiltShift::showImg() const {
-  cv::namedWindow("My Image");
-  cv::namedWindow("My Result");
-  cv::imshow("My Image", image);
-  cv::imshow("My Result", result);
+  cv::namedWindow("Obraz oryginalny");
+  cv::namedWindow("Rezultat");
+  cv::imshow("Obraz oryginalny", image);
+  cv::imshow("Rezultat", result);
 }
 
 void TiltShift::saveResult(const std::string& filename) const {
@@ -58,5 +58,5 @@ void TiltShift::gaussianBlur() {
     }
   }
 
-  cv::imshow("My Result", this->result);
+  cv::imshow("Rezultat", this->result);
 }
