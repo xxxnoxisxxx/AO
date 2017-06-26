@@ -3,7 +3,10 @@
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include "opencv2/imgproc/imgproc.hpp"
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/cudafilters.hpp>
+
+
 class TiltShift {
  public:
   TiltShift();
@@ -11,12 +14,12 @@ class TiltShift {
   ~TiltShift();
   void showImg() const;
   void saveResult(const std::string& filename) const;
-  inline bool ifImagesOpen() const { return image.data ? true : false; }
+  inline bool ifImagesOpen() const { return imageCpu.data ? true : false; }
   void gaussianBlur();
 
  private:
-  cv::Mat image;
-  cv::Mat result;
+  cv::Mat imageCpu;
+  cv::Mat resultCpu;
  public:
   int upHeight;
   int downHeight;

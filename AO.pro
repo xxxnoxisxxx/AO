@@ -42,7 +42,7 @@ LIBS += -LD:\opencv-build\install\x86\mingw\lib \
     -lopencv_imgcodecs320.dll \
     -lopencv_imgproc320.dll \
     -lopencv_features2d320.dll \
-    -lopencv_calib3d320.dll
-
+    -lopencv_calib3d320.dll \
+    -lopencv_cudafilters320.dll
 RESOURCES += \
     resources.qrc
