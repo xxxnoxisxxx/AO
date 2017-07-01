@@ -13,6 +13,7 @@ class MainWindow : public QMainWindow {
 
  public:
   explicit MainWindow(QWidget* parent = 0);
+  // Odblokowaie GUI i wyczyszczenie jego parametrow na poczatkowe
   void unblockAndClear();
   ~MainWindow();
 
@@ -45,6 +46,7 @@ class MainWindow : public QMainWindow {
 private:
   // Obiekt klasy przechowujacy obraz oryginalny oraz rezultat, umozliwiajacy wykonywanie operacji na obrazie wynikowym
   TiltShift tiltShift;
+  // GUI
   Ui::MainWindow* ui;
 };
 
