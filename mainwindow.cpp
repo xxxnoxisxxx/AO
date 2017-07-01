@@ -14,7 +14,7 @@ MainWindow::~MainWindow() { delete ui; }
 void MainWindow::on_actionOpen_triggered() {
   QString filename = QFileDialog::getOpenFileName(
       this, tr("Otwórz plik"), QString(),
-      tr("Plik graficzny (*.png *.jpg *.bmp *.jpeg)"));
+      tr("Plik graficzny (*.png *.jpg *.bmp)"));
 
   if (filename.isEmpty()) return;
 
@@ -33,7 +33,7 @@ void MainWindow::on_actionOpen_triggered() {
 void MainWindow::on_actionSave_triggered() {
   QString filename = QFileDialog::getSaveFileName(
       this, tr("Zapisz wynik"), "",
-      tr("Pliki graficzne (*.png *.jpg *.bmp *.jpeg)"));
+      tr("Pliki graficzne (*.png *.jpg *.bmp)"));
   if (!filename.isEmpty()) {
     this->tiltShift.saveResult(filename.toLocal8Bit().toStdString());
     QMessageBox::information(this, "Zapisano!", filename);

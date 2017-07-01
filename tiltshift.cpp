@@ -58,5 +58,6 @@ void TiltShift::gaussianBlur() {
     }
   }
 
+
   cv::imshow("Rezultat", this->result);
 }
